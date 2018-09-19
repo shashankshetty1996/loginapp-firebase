@@ -14,7 +14,7 @@
   const email = document.getElementById('email');
   const pass = document.getElementById('password');
   const form = document.getElementById('login');
-  const signUp = document.getElementById('signup');
+  // const signUp = document.getElementById('signup');
   const alert = document.getElementById('alert');
 
   function alertMsg(msg) {
@@ -27,31 +27,44 @@
     }, 3000);
   }
 
+  function validateEmail() {
+    let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+    if (reg.test(email.value) == false) {
+      alertMsg('Invalid Email Address');
+      return false;
+    }
+
+    return true;
+  }
+
   // Add Event Listener
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const auth = firebase.auth();
+    if (validateEmail()) {
+      const auth = firebase.auth();
 
-    // Sign in
-    const promise = auth.signInWithEmailAndPassword(email.value, pass.value);
-    promise.catch(e => alertMsg(e.message));
+      // Sign in
+      const promise = auth.signInWithEmailAndPassword(email.value, pass.value);
+      promise.catch(e => alertMsg(e.message));
+    }
   });
 
   // Signup
-  signUp.addEventListener('click', () => {
-    const auth = firebase.auth();
+  // signUp.addEventListener('click', () => {
+  //   const auth = firebase.auth();
 
-    // Sign in
-    const promise = auth.createUserWithEmailAndPassword(
-      email.value,
-      pass.value
-    );
-    // promise
-    //   .then(user => {
-    //     console.log(user);
-    //   })
-    //   .catch(e => console.log(`Error: ${e.message}`));
-  });
+  //   // Sign in
+  //   const promise = auth.createUserWithEmailAndPassword(
+  //     email.value,
+  //     pass.value
+  //   );
+  //   // promise
+  //   //   .then(user => {
+  //   //     console.log(user);
+  //   //   })
+  //   //   .catch(e => console.log(`Error: ${e.message}`));
+  // });
 
   // Firebase Listener
   firebase.auth().onAuthStateChanged(firebaseUser => {

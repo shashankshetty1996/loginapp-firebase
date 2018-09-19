@@ -6,7 +6,7 @@ body {
 .login-wrapper {
   position: absolute;
   width: 500px;
-  height: 400px;
+  height: 350px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -27,7 +27,7 @@ body {
 .login-wrapper .title {
   text-align: center;
   font-weight: bold;
-  color: #2196f3;
+  color: #037ad8;
   margin: 50px 20px 10px 20px;
 }
 
@@ -48,7 +48,7 @@ body {
   border: 0px;
   outline: none;
   text-indent: 35px;
-  border-bottom: 2px solid #2196f3;
+  border-bottom: 2px solid #037ad8;
   border-radius: 2px;
   box-shadow: none;
   box-sizing: border-box;
@@ -56,18 +56,18 @@ body {
 }
 
 .login-wrapper .form-group input:focus {
-  border-bottom: 2px solid #f32121;
+  border-bottom: 2px solid #000;
 }
 
 .login-wrapper .form-group input:valid {
-  border-bottom: 2px solid #2196f3;
+  border-bottom: 2px solid #037ad8;
 }
 
 .login-wrapper .form-group label {
   position: absolute;
   top: 25px;
   left: 35px;
-  color: #2196f3;
+  color: #037ad8;
   line-height: 18px;
   font-size: 16px;
   font-weight: bold;
@@ -79,11 +79,11 @@ body {
 .login-wrapper .form-group input:valid ~ label {
   top: 0px;
   font-weight: lighter;
-  color: #f32121;
+  color: #000;
 }
 
 .login-wrapper .form-group input:valid ~ label {
-  color: #2196f3;
+  color: #037ad8;
 }
 
 .login-wrapper .form-group i {
@@ -91,23 +91,23 @@ body {
   top: 20px;
   left: 10px;
   font-size: 24px;
-  color: #2196f3;
+  color: #037ad8;
   transition: 0.2s ease-in-out;
   pointer-events: none;
 }
 
 .login-wrapper .form-group input:focus ~ i,
 .login-wrapper .form-group input:valid ~ i {
-  color: #f32121;
+  color: #000;
 }
 
 .login-wrapper .form-group input:valid ~ i {
-  color: #2196f3;
+  color: #037ad8;
 }
 
 .login-wrapper .btn {
   position: relative;
-  background-color: #2196f3;
+  background-color: #037ad8;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
@@ -123,7 +123,7 @@ body {
 }
 
 .login-wrapper .btn:hover {
-  background-color: #f32121;
+  background-color: #000;
 }
 
 /* #signup {
@@ -134,18 +134,18 @@ body {
   margin: 8px;
   padding: 8px;
   background-color: transparent;
-  color: #2196f3;
+  color: #037ad8;
   transition: 0.2s ease-in-out;
 }
 
 #signup:hover {
-  color: #f32121;
+  color: #000;
   transform: translateX(20px);
   cursor: pointer;
 } */
 
 nav {
-  background-color: #2196f3;
+  background-color: #037ad8;
   height: 56px;
   line-height: 56px;
 }
@@ -158,11 +158,11 @@ nav #logout {
 }
 
 #alert {
-  background: #f32121;
+  background: #dc3545;
   color: #fff;
   text-align: center;
   width: 80%;
-  margin: 8px auto;
+  margin: 16px auto;
   padding: 1px;
   transition: opacity 0.3s ease-in-out;
 }
