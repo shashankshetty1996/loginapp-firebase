@@ -38,6 +38,8 @@
     return true;
   }
 
+  email.addEventListener('blur', validateEmail);
+
   // Add Event Listener
   form.addEventListener('submit', e => {
     e.preventDefault();
