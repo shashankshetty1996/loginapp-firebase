@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Y Media Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <div id="alert" class="hidden">
+    <h1>testing</h1>
+  </div>
+  <div class="login-wrapper">
+    <img class="logo" src="https://cdn3.iconfinder.com/data/icons/business-round-flat-vol-1-1/36/user_account_profile_avatar_person_student_male-512.png"
+      alt="Logo">
+    <h1 class="title">Login Here</h1>
+    <form id="login">
+      <div class="form-group">
+        <input type="email" name="email" id="email" required>
+        <i class="fa fa-user"></i>
+        <label for="email">Enter Email Id</label>
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" id="password" required>
+        <i class="fa fa-lock"></i>
+        <label for="password">Enter Password</label>
+      </div>
+      <input class="btn" type="submit" value="Log in">
+      <input class="btn" type="button" id="signup" value="Sign Up">
+    </form>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script src="js/auth-login.js"></script>
+</body>
+
+</html>
